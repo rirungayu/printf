@@ -2,12 +2,18 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+* _printf - prints a string
+* @format: format of input
+* Return: number of items printed
+*/
+
 int _printf(const char *format, ...)
 {
 int i = 0;
 int j = 0;
 va_list args;
-char * str;
+char* str;
 
 va_start(args, format);
 
@@ -19,7 +25,7 @@ str = va_arg(args, char *);
 while (str[j] != '\0')
 {
 putchar(str[j]);
-j++;  
+j++;
 }
 }
 i++;
