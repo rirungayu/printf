@@ -1,8 +1,30 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 
 int _printf(const char *format, ...)
 {
-return (0);
+int i = 0;
+int j = 0;
+va_list args;
+char * str;
+
+va_start(args, format);
+
+while (format[i] != '\0')
+{
+if (format[i] == 's')
+{
+str = va_arg(args, char *);
+while (str[j] != '\0')
+{
+putchar(str[j]);
+j++;  
+}
+}
+i++;
+}
+va_end(args);
+
+return (i);
 }
