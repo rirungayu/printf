@@ -21,7 +21,7 @@ while (format[i] != '\0')
 {
 if (format[i] == '%')
 {
-  ++i;
+  i+=2;
   continue;
 }
 putchar(format[i]);
