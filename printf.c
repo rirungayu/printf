@@ -18,12 +18,12 @@ va_start(args, format);
 if (format == NULL)
 exit(98);
 while (format[i] != '\0')
+{
 if (format[i] == '%')
 {
   ++i;
   continue;
 }
-{
 putchar(format[i]);
 i++;
 }
